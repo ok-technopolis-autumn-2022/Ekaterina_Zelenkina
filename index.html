@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>todos</title>
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header class="title">
+        <h1>todos</h1>
+    </header>
+
+    <!--MAIN-->
+    <main class="todo-list">
+
+        <header class="add-list">
+            <input type="button" name="drop-down-arrow">
+            <input type="text" placeholder="What needs to be done?">
+        </header>
+
+        <main class="list">
+            <ul class="tasks">
+                <li class="task">
+                    <input type="checkbox">
+                    <h2>HTML</h3>
+                        <input type="button">
+                </li>
+                <li class="task">
+                    <input type="checkbox">
+                    <h2>CSS</h3>
+                        <input type="button">
+                </li>
+                <li class="task">
+                    <input type="checkbox">
+                    <h2>JS</h3>
+                        <input type="button">
+                </li>
+                <li class="task">
+                    <input type="checkbox">
+                    <h2>JS tools</h3>
+                        <input type="button">
+                </li>
+            </ul>
+        </main>
+
+        <!--FOOTER, будет ли footer помимо footer'а листа(обатная связь, разработчик и т.п)?-->
+        <footer class="status">
+            <span>3 items left</span>
+            <span>
+                <input type="reset" name="status" value="All">
+                <input type="reset" name="status" value="Active">
+                <input type="reset" name="status" value="Completed">
+            </span>
+            <span>Clear completed</span>
+        </footer>
+    </main>
+
+</body>
+
+</html>
