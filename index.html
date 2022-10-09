@@ -17,31 +17,31 @@
 <main class="todo-list">
 
     <header class="add-list">
-        <input type="button">
-        <input type="text" placeholder="What needs to be done?">
+        <input type="button" title="Select all tasks">
+        <input type="text" placeholder="What needs to be done?" aria-label="What task do you want to complete?">
     </header>
 
     <main class="list">
         <ul class="tasks">
             <li class="task">
-                <input type="checkbox">
+                <input type="checkbox" aria-label="Mark the task completed">
                 <span>HTML</span>
-                <input type="button">
+                <input type="button" title="Delete a task">
             </li>
             <li class="task">
-                <input type="checkbox">
+                <input type="checkbox" aria-label="Mark the task completed">
                 <span>CSS</span>
-                <input type="button">
+                <input type="button" title="Delete a task">
             </li>
             <li class="task">
-                <input type="checkbox">
+                <input type="checkbox" aria-label="Mark the task completed">
                 <span>JS</span>
-                <input type="button">
+                <input type="button" title="Delete a task">
             </li>
             <li class="task">
-                <input type="checkbox">
+                <input type="checkbox" aria-label="Mark the task completed">
                 <span>JS tools</span>
-                <input type="button">
+                <input type="button" title="Delete a task">
             </li>
         </ul>
     </main>
@@ -49,10 +49,13 @@
     <!--FOOTER-->
     <footer class="status">
         <span>3 items left</span>
-        <span>
-            <input type="radio" name="status" value="All">
-            <input type="radio" name="status" value="Active">
-            <input type="radio" name="status" value="Completed">
+        <span role="radiogroup" aria-label="Select the display mode">
+            <label for="all">
+                <input type="radio" name="status" value="All">All</label>
+            <label for="Active">
+                <input type="radio" name="status" value="Active">Active</label>
+            <label for="Completed">
+                <input type="radio" name="status" value="Completed">Completed</label>
         </span>
         <input type="button" value="Clear completed"/>
     </footer>
