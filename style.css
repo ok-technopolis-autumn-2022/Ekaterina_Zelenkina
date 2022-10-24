@@ -1,0 +1,161 @@
+@import url(normalize.css);
+@import url(fonts.css);
+
+.html{
+    box-sizing: border-box; 
+}
+*,*::before,*::after{
+    box-sizing: inherit; /*border-box наследуется везде*/
+}
+body{           /*Все новые элементы будут наследовать общее семейство и стиль шрифтов*/
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    background: #F2F2F2;
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+}
+div{
+    display: block;
+}
+
+.title {
+    text-align: center;
+    word-break: break-word;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 100px;
+    letter-spacing: -2.5px;
+    color: #CCCCCC;
+}
+
+.todo-list{
+    position: relative;
+    width: 80%;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    min-width: 480px;
+    max-width: 562px;
+}
+.todo-list:before{
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    height: 6px;
+    left: 2px;
+    right: 2px;
+    z-index: -1;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.todo-list:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    height: 12px;
+    left: 4px;
+    right: 4px;
+    z-index: -2;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.add-list{
+    box-shadow: inset 0px -1px 0px #E6E6E6;
+    width: 562px;
+    height: 66px;
+}
+.add-list button{
+    width: 28px;
+    height: 16px;
+    padding: 27px 17px 23px;
+    background-image: url(/img/arrow.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+.add-list input{
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    height: 21px;
+    width: 86%;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 21px;
+    color: #CCCCCC;
+    padding: 24.5px 0px 19.5px;
+    border: 0;
+}
+.task {
+    display: flex;
+    height: 64px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.task-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #666666;
+    cursor: pointer;
+    flex-grow: 1;
+    font-size: 24px;
+    word-break: break-word;
+    outline: none;
+    border: 0;
+    padding: 0;
+}
+.task-text:hover, .task:hover {
+    background:#FAFAFA;
+}
+.task input[type=checkbox] {
+    height: 41px;
+    width: 41px;
+    align-self: center;
+    margin: 0 10px;
+    border: 1px solid #E6E6E6;
+    border-radius: 50%;
+    appearance: none;
+}
+.task input[type=checkbox]:checked {
+    background-image: url(/img/checkMark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    border: 1px solid #60C2B1;
+}
+.delete-task {
+    background-image: url(/img/cross.svg);
+    height: 20px;
+    width: 20px;
+    align-self: center;
+    color:#EBDFDF;
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin: 22px 11px 22px;
+    background-repeat: no-repeat;
+    border: 0;
+}
+.list-footer {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    margin: 0 10px;
+    font-size: 14px;
+    color: #888888;
+}
+.statuses input[type=radio] {
+    opacity: 0.01;
+}
+.status:hover {
+    border: 1px solid #EBDFDF;
+}
+.clear {
+    background-color: #FFFFFF;
+    color: #888888;
+    border: 0;
+}
