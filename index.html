@@ -9,62 +9,64 @@
 
 <body>
 
-<!--HEADER-->
-<header class="title">
-    <h1>todos</h1>
-</header>
-
-<!--MAIN-->
-<main class="todo-list">
-
-    <header class="add-list">
-        <button aria-label="Select all tasks"></button>
-        <input type="text" placeholder="What needs to be done?" aria-label="What task do you want to complete?">
+    <!--HEADER-->
+    <header class="title">
+        <h1>todos</h1>
     </header>
 
-    <main class="list">
-        <ul class="tasks">
-            
+    <!--MAIN-->
+    <main class="todo-list">
+
+        <header class="add-list">
+            <button aria-label="Select all tasks"></button>
+            <input type="text" placeholder="What needs to be done?" aria-label="What task do you want to complete?">
+        </header>
+
+        <main class="list">
+            <ul class="tasks">
                 <li class="task">
                     <input type="checkbox" aria-label="Mark the task completed">
-                    <input class="task-text"type="text" value="HTML" aria-label="Edit the task">
+                    <span class="task-text">HTML</span>
                     <input class="delete-task" type="button" title="Delete a task">
                 </li>
-           
+                <li class="task">
+                    <input type="checkbox" aria-label="Mark the task completed">
+                    <span class="task-text">CSS</span>
+                    <input class="delete-task" type="button" title="Delete a task">
+                </li>
+                <li class="task">
+                    <input type="checkbox" aria-label="Mark the task completed">
+                    <span class="task-text">JS</span>
+                    <input class="delete-task" type="button" title="Delete a task">
+                </li>
+                <li class="task">
+                    <input type="checkbox" aria-label="Mark the task completed">
+                    <span class="task-text">JS tools</span>
+                    <input class="delete-task" type="button" title="Delete a task">
+                </li>
+            </ul>
+        </main>
 
-            <li class="task">
-                <input type="checkbox" aria-label="Mark the task completed">
-                <input class="task-text"type="text" value="CSS" aria-label="Edit the task">
-                <input class="delete-task" type="button" title="Delete a task">
-            </li>
-            <li class="task">
-                <input type="checkbox" aria-label="Mark the task completed">
-                <input class="task-text"type="text" value="JS" aria-label="Edit the task">
-                <input class="delete-task" type="button" title="Delete a task">
-            </li>
-            <li class="task">
-                <input type="checkbox" aria-label="Mark the task completed">
-                <input class="task-text"type="text" value="JS tools" aria-label="Edit the task">
-                <input class="delete-task" type="button" title="Delete a task">
-            </li>
-        </ul>
+        <!--FOOTER-->
+        <footer class="list-footer">
+            <span class="task-counter">3 items left</span>
+            <span class="statuses" role="radiogroup" aria-label="Select the display mode">
+                <label class="status" for="all">
+                    <input class="status-item1" type="radio" name="status" value="All">
+                    <span class="status-text">All</span>
+                </label>
+                <label class="status" for="Active">
+                    <input class="status-item2" type="radio" name="status" value="Active">
+                    <span class="status-text">Active</span>
+                </label>
+                <label class="status" for="Completed">
+                    <input class="status-item3" type="radio" name="status" value="Completed">
+                    <span class="status-text">Completed</span>
+                </label>
+            </span>
+            <input class="clear-text" type="button" value="Clear completed" />
+        </footer>
     </main>
-
-    <!--FOOTER-->
-    <footer class="list-footer">
-        <span>3 items left</span>
-        <span class="statuses" role="radiogroup" aria-label="Select the display mode">
-            <label for="all">
-                <input class="status" type="radio" name="status" value="All">All</label>
-            <label for="Active">
-                <input class="status" type="radio" name="status" value="Active">Active</label>
-            <label for="Completed">
-                <input class="status" type="radio" name="status" value="Completed">Completed</label>
-        </span>
-        <input class="clear" type="button" value="Clear completed"/>
-    </footer>
-</main>
-
 </body>
 
 </html>
