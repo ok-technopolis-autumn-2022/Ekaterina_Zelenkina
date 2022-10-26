@@ -90,7 +90,6 @@ div {
 }
 
 .add-list input {
-    position: absolute;
     font-family: 'Roboto', sans-serif;
     height: 21px;
     width: 86%;
@@ -98,9 +97,14 @@ div {
     font-style: italic;
     font-weight: 300;
     line-height: 21px;
-    color: #CCCCCC;
+    letter-spacing: -0.6px;
     padding: 24.5px 0px 19.5px;
     border: 0;
+    outline: none;
+}
+
+.add-list ::placeholder {
+    color: #CCCCCC;
 }
 
 .task {
@@ -151,13 +155,13 @@ div {
 
 .delete-task {
     background-image: url(/img/cross.svg);
-    height: 20px;
-    width: 20px;
-    align-self: center;
     background-color: transparent;
-    padding: 0px;
-    margin: 22px 11px 22px;
     background-repeat: no-repeat;
+    background-position: center;
+    height: 36px;
+    width: 36px;
+    margin: 14px 3px;
+    padding: 0px;
     border: 0;
     opacity: 0;
 }
@@ -188,6 +192,7 @@ div {
 .statuses {
     padding: 12px 0;
     cursor: pointer;
+    margin-left: 50px;
 }
 
 .status-text {
@@ -195,32 +200,21 @@ div {
     font-weight: 300;
     border-radius: 10%;
     padding: 2px 10px;
-    margin: 0 5px;
+    margin: 0px 8px;
 }
 
-.status-item1 {
-    width: 40px;
-    margin-right: -45px;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.status-item2 {
-    width: 40px;
-    margin-right: -55px;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.status-item3 {
+.status-item {
     width: 65px;
     margin-right: -80px;
     opacity: 0;
     cursor: pointer;
 }
 
-input[type="radio"]:checked + .status-text {
-    opacity: 1;
+.statuses input[type="radio"]:checked+.status-text {
+    border: 1px solid #EBDFDF;
+}
+
+.statuses input[type="radio"]:focus+.status-text {
     border: 1px solid #EBDFDF;
 }
 
@@ -230,4 +224,5 @@ input[type="radio"]:checked + .status-text {
     border: none;
     color: #888888;
     background-color: #FFFFFF;
+    outline: none;
 }
