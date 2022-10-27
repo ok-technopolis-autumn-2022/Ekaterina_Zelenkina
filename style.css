@@ -108,12 +108,17 @@ div {
 }
 
 .task {
-    display: flex;
     flex-direction: inherit;
-    height: 64px;
     border-bottom: 1px solid #E6E6E6;
-    cursor: pointer;
+    cursor: pointer; 
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    min-height: 59px;
+    overflow: hidden;
+
 }
+
 
 .task:hover {
     background: #FAFAFA;
@@ -121,6 +126,7 @@ div {
 
 .task-text {
     font-family: 'Roboto', sans-serif;
+    padding: 12px 0;
     align-self: center;
     font-weight: 300;
     color: #666666;
@@ -131,7 +137,7 @@ div {
 
 .task input[type=checkbox] {
     height: 41px;
-    width: 41px;
+    min-width: 41px;
     align-self: center;
     margin: 0 10px;
     border: 1px solid #E6E6E6;
@@ -190,6 +196,8 @@ div {
 }
 
 .statuses {
+    display: flex;
+    justify-content: space-around;
     padding: 12px 0;
     cursor: pointer;
     margin-left: 50px;
@@ -197,10 +205,11 @@ div {
 
 .status-text {
     font-family: 'Roboto', sans-serif;
+    border: 1px solid transparent;
     font-weight: 300;
-    border-radius: 10%;
+    border-radius: 3px;
     padding: 2px 10px;
-    margin: 0px 8px;
+    margin: 0px 6px;
 }
 
 .status-item {
@@ -211,18 +220,18 @@ div {
 }
 
 .statuses input[type="radio"]:checked+.status-text {
-    border: 1px solid #EBDFDF;
+    border-color: #EBDFDF;
 }
 
 .statuses input[type="radio"]:focus+.status-text {
-    border: 1px solid #EBDFDF;
+    border-color: #EBDFDF;
 }
 
 .clear-text {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    height: 25px;
     border: none;
     color: #888888;
     background-color: #FFFFFF;
-    outline: none;
 }
