@@ -1,0 +1,237 @@
+@import url(normalize.css);
+@import url(fonts.css);
+
+.html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    /*border-box наследуется везде*/
+}
+
+body {
+    /*Все новые элементы будут наследовать общее семейство и стиль шрифтов*/
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    background: #F2F2F2;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+div {
+    display: block;
+}
+
+.title {
+    text-align: center;
+    word-break: break-word;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 100px;
+    margin-top: 100px;
+    letter-spacing: -2.5px;
+    color: #CCCCCC;
+}
+
+.todo-list {
+    position: relative;
+    width: 80%;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    min-width: 480px;
+    max-width: 562px;
+}
+
+.todo-list:before {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    height: 6px;
+    left: 2px;
+    right: 2px;
+    z-index: -1;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    height: 12px;
+    left: 4px;
+    right: 4px;
+    z-index: -2;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.add-list {
+    border-bottom: 1px solid #E6E6E6;
+    width: 562px;
+    height: 66px;
+}
+
+.add-list button {
+    width: 28px;
+    height: 16px;
+    padding: 27px 17px 23px;
+    background-image: url(/img/arrow.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.add-list input {
+    font-family: 'Roboto', sans-serif;
+    height: 21px;
+    width: 86%;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: -0.6px;
+    padding: 24.5px 0px 19.5px;
+    border: 0;
+    outline: none;
+}
+
+.add-list ::placeholder {
+    color: #CCCCCC;
+}
+
+.task {
+    flex-direction: inherit;
+    border-bottom: 1px solid #E6E6E6;
+    cursor: pointer; 
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    min-height: 59px;
+    overflow: hidden;
+
+}
+
+
+.task:hover {
+    background: #FAFAFA;
+}
+
+.task-text {
+    font-family: 'Roboto', sans-serif;
+    padding: 12px 0;
+    align-self: center;
+    font-weight: 300;
+    color: #666666;
+    flex-grow: 1;
+    font-size: 24px;
+    word-break: break-word;
+}
+
+.task input[type=checkbox] {
+    height: 41px;
+    min-width: 41px;
+    align-self: center;
+    margin: 0 10px;
+    border: 1px solid #E6E6E6;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+}
+
+.task input[type=checkbox]:checked {
+    background-image: url(/img/checkMark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    border: 1px solid #60C2B1;
+}
+
+.task input[type=checkbox]:checked~.task-text {
+    color: #CCCCCC;
+    text-decoration: line-through;
+}
+
+.delete-task {
+    background-image: url(/img/cross.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 36px;
+    width: 36px;
+    margin: 14px 3px;
+    padding: 0px;
+    border: 0;
+    opacity: 0;
+}
+
+.task:hover .delete-task {
+    opacity: 1;
+}
+
+.delete-task:focus {
+    opacity: 1;
+}
+
+.task-counter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.list-footer {
+    height: 40px;
+    color: #888888;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.statuses {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.status-text {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid transparent;
+    font-weight: 300;
+    border-radius: 3px;
+    padding: 2px 10px;
+    margin: 0px 6px;
+}
+
+.status-item {
+    width: 65px;
+    margin-right: -80px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.statuses input[type="radio"]:checked+.status-text {
+    border-color: #EBDFDF;
+}
+
+.statuses input[type="radio"]:focus+.status-text {
+    border-color: #EBDFDF;
+}
+
+.clear-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 25px;
+    border: none;
+    color: #888888;
+    background-color: #FFFFFF;
+}
