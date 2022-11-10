@@ -29,7 +29,7 @@ div {
 	font-size: $font_100;
 	margin-top: 100px;
 	letter-spacing: -2.5px;
-	color: $color-gray-с;
+	color: $color-light-gray;
 }
 .todo-list {
 	position: relative;
@@ -63,7 +63,7 @@ div {
 	}
 }
 .add-list {
-	border-bottom: $border_type $color-gray-light;
+	border-bottom: $border_type $color-light-gray;
 	width: 562px;
 	height: $height-add-list;
 	button {
@@ -90,12 +90,12 @@ div {
 		outline: $type-visibility-none;
 	}
 	::placeholder {
-		color: $color-gray-c;
+		color: $color-light-gray;
 	}
 }
 .task {
 	flex-direction: inherit;
-	border-bottom: $border_type $color-gray-light;
+	border-bottom: $border_type $color-light-gray;
 	cursor: $cursor-pointer;
 	display: flex;
 	flex-grow: 1;
@@ -123,7 +123,7 @@ div {
 		min-width: 41px;
 		align-self: center;
 		margin: 0 10px;
-		border: $border_type $color-gray-light;
+		border: $border_type $color-light-gray;
 		border-radius: 50%;
 		cursor: $cursor-pointer;
 		appearance: $type-visibility-none;
@@ -134,7 +134,7 @@ div {
 			background-size: 20px;
 			border: $border_type $color-green;
 			&~.task-text {
-				color: $color-gray-с;
+				color: $color-light-gray;
 				text-decoration: line-through;
 			}
 		}

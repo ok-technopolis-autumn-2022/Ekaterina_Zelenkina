@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
-    "dev": "parcel /index.html",
-    "build": "parcel /build index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   "homepage": "https://github.com/ok-technopolis-autumn-2022/Ekaterina_Zelenkina#readme",
   "keywords": [],
   "dependencies": {
-    "parsel": "^0.3.0"
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
   }
-  
 }
