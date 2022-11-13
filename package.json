@@ -1,0 +1,28 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "task list application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-autumn-2022/Ekaterina_Zelenkina.git"
+  },
+  "author": "Ekaterina Zelenkina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-autumn-2022/Ekaterina_Zelenkina/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-autumn-2022/Ekaterina_Zelenkina#readme",
+  "keywords": [],
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
